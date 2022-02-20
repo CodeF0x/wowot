@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --text-color: #f6f6f7;
+  --background-color: #0b1725;
+  --button-background: #4e9f3d;
+  --text-color-accent: #f6f6f7c2;
+}
+
+select {
+  border: none;
+
+  padding: 15px;
+  font-size: large;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+
+  background: var(--background-color);
+  color: var(--text-color);
+  font-size: large;
+  font-family: 'Roboto', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+
+  width: 40%;
+}
+
+.info-text {
+  text-align: center;
+}
+
+.button {
+  padding: 15px;
+  background: #4e9f3d;
+  border-radius: 2px;
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.control-container {
+  display: flex;
+  gap: 8px;
+}
+
+.highlight {
+  background: var(--button-background);
+  border-radius: 2px;
+  padding: 10px;
+}
+
+#nickname {
+  font-size: x-large;
+}
+
+.logout-hint {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text-color-accent);
+}

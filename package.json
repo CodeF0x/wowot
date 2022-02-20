@@ -1,0 +1,24 @@
+{
+  "name": "wowot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeF0x/wowot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeF0x/wowot/issues"
+  },
+  "homepage": "https://github.com/CodeF0x/wowot#readme",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "express": "^4.17.3"
+  }
+}
