@@ -71,8 +71,13 @@ body {
   font-size: x-large;
 }
 
-.logout-hint {
+.disclaimer {
   margin-top: 10px;
   font-size: 12px;
+  color: var(--text-color-accent);
+}
+
+.disclaimer > a,
+.disclaimer > a:visited {
   color: var(--text-color-accent);
 }

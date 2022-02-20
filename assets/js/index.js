@@ -1,5 +1,5 @@
 const authLinkElement = document.getElementById('auth-link-element');
 
-authLinkElement.addEventListener('change', (e) => {
+document.getElementById('realm-selection').addEventListener('change', (e) => {
   authLinkElement.href = `/login?realm=${e.target.value}`;
 });
