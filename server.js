@@ -10,7 +10,7 @@ app.get('/login', (req, res) => {
   const realm = req.query.realm;
 
   res.redirect(
-    `https://api.worldoftanks.${realm}/wot/auth/login/?application_id=${APPLICATION_ID}&expires_at=600&redirect_uri=http://localhost:3000/authenticated/`
+    `https://api.worldoftanks.${realm}/wot/auth/login/?application_id=${APPLICATION_ID}&expires_at=600&redirect_uri=https://wowot.cc/authenticated/`
   );
 });
 
@@ -27,4 +27,4 @@ app.post('/time', async (req, res) => {
 });
 
 app.use('/', express.static('assets'));
-app.listen(3000);
+app.listen(4000);
