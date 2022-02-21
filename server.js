@@ -3,6 +3,7 @@ const fs = require('fs');
 const fetch = require('cross-fetch');
 const app = express();
 
+const REDIRECT_URI = process.env.DEVELOPMENT ? 'http://localhost:4000' : 'https://wowot.cc'
 const APPLICATION_ID = fs.readFileSync('.token', 'utf8');
 
 app.use(express.json());
@@ -10,7 +11,7 @@ app.get('/login', (req, res) => {
   const realm = req.query.realm;
 
   res.redirect(
-    `https://api.worldoftanks.${realm}/wot/auth/login/?application_id=${APPLICATION_ID}&expires_at=600&redirect_uri=https://wowot.cc/authenticated/`
+    `https://api.worldoftanks.${realm}/wot/auth/login/?application_id=${APPLICATION_ID}&expires_at=600&redirect_uri=${REDIRECT_URI}/authenticated/`
   );
 });
 
