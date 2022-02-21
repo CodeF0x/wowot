@@ -25,7 +25,7 @@ app.get('/logout', async (req, res) => {
     `https://api.worldoftanks.${realm}/wot/auth/logout/?application_id=${APPLICATION_ID}&access_token=${accessToken}`,
     { method: 'POST' }
   );
-  res.redirect(200, '/');
+  res.redirect('/');
 });
 
 app.post('/time', async (req, res) => {
