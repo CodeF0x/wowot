@@ -21,13 +21,13 @@
   }
 
   const json = await (
-    await fetch(`/time?realm=${realm}`, {
+    await fetch(`/time`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ accessToken, accountId }),
+      body: JSON.stringify({ accessToken, accountId, realm }),
     })
   ).json();
 

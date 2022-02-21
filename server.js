@@ -29,8 +29,7 @@ app.get('/logout', async (req, res) => {
 });
 
 app.post('/time', async (req, res) => {
-  const realm = req.query.realm;
-  const { accessToken, accountId } = req.body;
+  const { accessToken, accountId, realm } = req.body;
 
   const json = await (
     await fetch(
