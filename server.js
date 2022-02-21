@@ -15,11 +15,12 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/time', async (req, res) => {
+  const realm = req.query.realm;
   const { accessToken, accountId } = req.body;
 
   const json = await (
     await fetch(
-      `https://api.worldoftanks.eu/wot/account/info/?application_id=350d62f4514e16a540067fa3750a3769&account_id=${accountId}&access_token=${accessToken}`
+      `https://api.worldoftanks.${realm}/wot/account/info/?application_id=350d62f4514e16a540067fa3750a3769&account_id=${accountId}&access_token=${accessToken}`
     )
   ).json();
 

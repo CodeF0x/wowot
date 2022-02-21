@@ -3,6 +3,7 @@
   const hoursOuput = document.getElementById('hours');
   const daysOutput = document.getElementById('days');
   const nicknameOuput = document.getElementById('nickname');
+  const realm = sessionStorage.getItem('realm');
   let accessToken, accountId;
 
   const params = window.location.href.split('&');
@@ -19,7 +20,7 @@
   }
 
   const json = await (
-    await fetch('/time', {
+    await fetch(`/time?realm=${realm}`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
