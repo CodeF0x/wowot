@@ -3,7 +3,9 @@ const fs = require('fs');
 const fetch = require('cross-fetch');
 const app = express();
 
-const REDIRECT_URI = process.env.DEVELOPMENT ? 'http://localhost:4000' : 'https://wowot.cc'
+const REDIRECT_URI = process.env.DEVELOPMENT
+  ? 'http://localhost:4000'
+  : 'https://wowot.cc';
 const APPLICATION_ID = fs.readFileSync('.token', 'utf8');
 
 app.use(express.json());

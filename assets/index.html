@@ -1,54 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>How much time did I waste on WoT?</title>
-    <meta name="page-type" content="Statistics">
-    <meta name="page-topic" content="Games">
-    <meta name="copyright" content="CodeF0x">
-    <meta name="author" content="CodeF0x &amp; miit0o">
-    <meta name="keywords" content="wot, world of tanks, playtime, wot playtime, world of tanks playtime, ingame time, time">
-    <meta name="description" content="wowot.cc, a site that tells you your all time WoT ingame time.">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime:400,400i,700,700i&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <meta name="page-type" content="Statistics" />
+    <meta name="page-topic" content="Games" />
+    <meta name="copyright" content="CodeF0x" />
+    <meta name="author" content="CodeF0x &amp; miit0o" />
+    <meta
+      name="keywords"
+      content="wot, world of tanks, playtime, wot playtime, world of tanks playtime, ingame time, time"
+    />
+    <meta
+      name="description"
+      content="wowot.cc, a site that tells you your all time WoT ingame time."
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Courier+Prime:400,400i,700,700i&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body style="font-family: 'Courier Prime', monospace;">
+  <body style="font-family: 'Courier Prime', monospace">
     <nav class="navbar navbar-light navbar-expand-md shadow">
-        <div class="container-fluid"><a class="navbar-brand" href="/">WOWOT</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/did-i.html">Did I waste my time?</a></li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">WOWOT</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/did-i.html">Did I waste my time?</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <section class="main-content-section">
-        <div class="card content-card shadow">
-            <div class="card-body">
-                <h4 class="card-title">How much of my life did I waste in WoT?</h4>
-                <h6 class="text-muted card-subtitle mb-2">I know you're curious.</h6>
-                <p class="card-text">You wanna know how many hours you wasted in World of Tanks? Select your server region, click the button and login with your Wargaming credentiatls. Thats it!</p>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6"><a class="btn btn-primary wowot-btn shadow" role="button" id="auth-link-element" href="/login?realm=eu">How much time did I waste on Wot?</a></div>
-                    <div class="col-md-6"><select id="realm-selection">
-                            <option value="eu" selected="">EU</option>
-                            <option value="ru">RU</option>
-                            <option value="com">NA</option>
-                            <option value="asia">ASIA</option>
-                        </select></div>
-                </div>
-            </div>
+      <div class="card content-card shadow">
+        <div class="card-body">
+          <h4 class="card-title">How much of my life did I waste in WoT?</h4>
+          <h6 class="text-muted card-subtitle mb-2">I know you're curious.</h6>
+          <p class="card-text">
+            You wanna know how many hours you wasted in World of Tanks? Select
+            your server region, click the button and login with your Wargaming
+            credentiatls. Thats it!
+          </p>
         </div>
-        <div class="disclaimer"><small>Made by <a href="https://github.com/CodeF0x" target="_blank">CodeF0x</a> | Design by <a href="https://github.com/miit0o" target="_blank">miit0o</a></small></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <a
+                class="btn btn-primary wowot-btn shadow"
+                role="button"
+                id="auth-link-element"
+                href="/login?realm=eu"
+                >How much time did I waste on Wot?</a
+              >
+            </div>
+            <div class="col-md-6">
+              <select id="realm-selection">
+                <option value="eu" selected="">EU</option>
+                <option value="ru">RU</option>
+                <option value="com">NA</option>
+                <option value="asia">ASIA</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <small
+          >Made by
+          <a href="https://github.com/CodeF0x" target="_blank">CodeF0x</a> |
+          Design by
+          <a href="https://github.com/miit0o" target="_blank">miit0o</a></small
+        >
+      </div>
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>
