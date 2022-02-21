@@ -17,6 +17,17 @@ app.get('/login', (req, res) => {
   );
 });
 
+app.get('/logout', async (req, res) => {
+  const realm = req.query.realm;
+  const accessToken = req.query.access_token;
+
+  await fetch(
+    `https://api.worldoftanks.${realm}/wot/auth/logout/?application_id=${APPLICATION_ID}&access_token=${accessToken}`,
+    { method: 'POST' }
+  );
+  res.redirect(200, '/');
+});
+
 app.post('/time', async (req, res) => {
   const realm = req.query.realm;
   const { accessToken, accountId } = req.body;
@@ -27,7 +38,12 @@ app.post('/time', async (req, res) => {
     )
   ).json();
 
-  res.send(json);
+  if (json.status === 'error' && json.error.code === 407) {
+    res.status(400).send({ error: true });
+    return;
+  }
+
+  res.status(200).send(json);
 });
 
 app.use('/', express.static('assets'));

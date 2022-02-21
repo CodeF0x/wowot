@@ -3,6 +3,7 @@
   const hoursOuput = document.getElementById('hours');
   const daysOutput = document.getElementById('days');
   const nicknameOuput = document.getElementById('nickname');
+  const logoutLink = document.getElementById('logout');
   const realm = sessionStorage.getItem('realm');
   let accessToken, accountId;
 
@@ -29,6 +30,13 @@
       body: JSON.stringify({ accessToken, accountId }),
     })
   ).json();
+
+  // who cares at this point
+  if (json.error) {
+    location.href = '/';
+    return;
+  }
+
   const nickName = json.data[accountId].nickname;
   const secondsWasted = json.data[accountId].private.battle_life_time;
 
@@ -41,4 +49,6 @@
   minutesOuput.innerText = minutesWasted;
   hoursOuput.innerText = hoursWasted;
   daysOutput.innerText = daysWasted;
+
+  logoutLink.href = `/logout?realm=${realm}&access_token=${accessToken}`;
 })();
